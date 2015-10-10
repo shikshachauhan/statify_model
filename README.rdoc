@@ -1,0 +1,52 @@
+= StatifyModel
+
+This project rocks and uses MIT-LICENSE.
+
+StatifyModel provides scopes and helper methods for the models having a table column named `enabled` .
+
+= Installation
+
+Add to your Gemfile
+* gem 'statify_model'
+
+= Usage
+
+Define a column 'enabled' with type 'boolean' in the model you wish to statify.
+Call the method `has_status` in the model.
+
+For eg. -
+
+  class Talk < ActiveRecord::Base
+    has_status
+  end
+
+Scopes defined on Talk class are -
+
+  enabled - Filters all the enabled records.
+    returns arel of all the enabled records.
+
+  disabled - Filters all the disabled records.
+    returns arel of all the disabled records.
+
+
+Instance Methods defined on Talk class are -
+
+  enable - Updates the status to be enabled.
+    returns true when the status is updated succesfully in the database.
+    returns false when the status is not updated in the database.
+
+  disable - Updates the status to be disabled.
+    returns true when the status is updated succesfully in the database.
+    returns false when the status is not updated in the database.
+
+  toggle_status - Toggles the status.
+    returns true when the status is updated succesfully in the database.
+    returns false when the status is not updated in the database.
+
+  enabled? - Checks whether the record is enabled.
+    returns true when the status is enabled.
+    returns false when the sttaus is disabled.
+
+  disabled? - Checks whether the record is disabled.
+    returns true when the sttaus is disabled.
+    returns false when the status is enabled.

@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = StatifyModel::VERSION
   s.authors     = ["shikshachauhan"]
   s.email       = ["chauhanshiksha1@vinsol.com"]
-  s.homepage      = 'https://github.com/shikshachauhan/statify_model'
+  s.homepage    = 'https://github.com/shikshachauhan/statify_model'
   s.summary     = "StatifyModel adds Enable and Disable attributes and helper methods on the model calling has_status method."
   s.description = "Enable and Disable attributes and helper methods on the model calling has_status method are added."
   s.license     = "MIT"
